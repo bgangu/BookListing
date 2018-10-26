@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="#8093FF"
+    tools:context=".BookListingActivity">
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_text"
+            style="@style/height_width_match_parent"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:src="@drawable/search"
+            style="@style/height_width_match_parent"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/book_list"
+        android:layout_below="@+id/search_layout"
+        style="@style/height_width_match_parent">
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/display_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
